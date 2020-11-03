@@ -8,6 +8,8 @@
     <meta name="description" content="Vous souhaitez acquérir les plus belles peluches ? Faites appel à ORINOCO, les plus douces pour les calins des tout petits !!!">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
 
 
@@ -16,7 +18,7 @@
 <body>
     <!-- bloc-header -->
     <header>
-        <div class="container">
+        <div class="container-fluid">
                        
                 <div class="navigation-header">
                                     
@@ -25,7 +27,7 @@
                     </button>
                 
                     <a class="banniere" href="index.html">
-                        <img src="images/logoOrinoco.png" alt="Logo Orinoco" title="logo de ORINOCO" height="80"/>	
+                        <img id="logo" src="images/logoOrinoco.png" alt="Logo Orinoco" title="logo de ORINOCO" height="80"/>	
                     </a>
                 </div>
                 
@@ -68,11 +70,11 @@
 			<section class="footer2">
 					<div id="footer_left">	
 						<a href="Mentions_legales.html">
-						<h3>Mentions Légales</h3></a>
+						<h4>Mentions Légales</h3></a>
 					</div>
 					<div id="footer_right">
 						<a href="mailto:adresse@serveur.com">	
-						<h3>Contactez-nous</h3></a>	
+						<h4>Contactez-nous</h3></a>	
 					</div>
 			</section>
 		</footer>	
@@ -81,6 +83,15 @@
 
 
     <script src="./index.js"></script> 
-    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
+integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+</script>
 </body>
 </html>
