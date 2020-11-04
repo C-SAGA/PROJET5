@@ -1,54 +1,31 @@
 #logo{ 
     display: flex;
     flex-direction: row;
-    align-items: baseline;  
-    margin-left: -90em;
-
+    align-items: baseline;
+    margin-right: 1215px;
 } 
 
-.container-fluid{
+.container-fluid-sm{
     width: 100%;
     background-color: #f3e9f1;
     display: flex;
     justify-content: flex-end;
     margin-top: 0;
+   
 }
 
 /* Navigation */
 
-.barre-navigation{
-    margin-top: 10px;
-}
-
-#nav-toggle{
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0,0,0,0);
-    border: 0;
-}
-
 nav ul{
     list-style-type: none;
-    display: flex;
-    margin-top: 15px;
-}
-
-nav li{
-    margin-right: 15px;
-   
 }
 
 nav a{
-    font-size: 1.3em;
+    font-size: 1.25rem;
     color: #181818;
     padding-bottom: 3px;
     text-decoration: none;
     font-weight: 700;
-    margin-right: 15px;
 }
 
 nav a:hover{

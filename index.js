@@ -10,8 +10,9 @@ response.forEach(element => {
   const div=document.createElement("div")
   div.innerHTML = `
   <div class="produit">
-   
+  <div class="jumbotron">
     <img src="${element.imageUrl}" alt="teddy_1" title="Norbert" height="300">
+   
     <h3 class="produitOursonTeddy">${element.name}</h3>
    <a href="catalogue.html?id=${element._id}">Voir le produit</a>
   </div>`

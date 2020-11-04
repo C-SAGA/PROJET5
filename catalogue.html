@@ -3,42 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
   integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Catalogue Produits</title>
+  
+  <title>Catalogue Produits</title>
 </head>
 <body>
   <header>
-    <div class="container-fluid">
-                   
-            <div class="navigation-header">
-                                
-                <button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
-                    <span class="toggle">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-                </button>
-            
-                <a class="banniere" href="index.html">
-                    <img id="logo" src="images/logoOrinoco.png" alt="Logo Orinoco" title="logo de ORINOCO" height="80"/>	
+    <div class="container-fluid-sm">     
+        <div class="navbar row">                   
+            <div class="navbar-header">
+                                    
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                 </button>
+           
+                 <a class="navbar-brand" href="index.html">   
+                    <img id="logo" src="images/logoOrinoco.png" alt="Logo Orinoco" title="logo de ORINOCO" height="90"/>	
                 </a>
-            </div>
+            </div>        
             
-            
-            <nav class="barre-navigation">
-                <ul class="navigation">
-                
-                    <li>
-                        <a href="index.html" title="Les peluches">Accueil</a>
-                    </li>
-                    <li>
-                        <a href="panier.html" title="Les achats">Panier</a>
-                    </li>
-                    <li>
-                        <a href="contact.html" title="Formulaire de contact">Nous contacter</a>
-                    </li>                   
-                </ul>
-            </nav>
-        </div>
+        <nav class="navbar navbar-expand-lg">           
+            <a class="navbar-brand" href="index.html" title="Les peluches">Accueil</a>   
+            <ul class="navbar-nav">                     
+                <li class="nav-item active">
+                    <a class="nav-link" href="panier.html" title="Les achats">Panier</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html" title="Formulaire de contact">Nous contacter</a>
+                </li>                   
+            </ul>
+        </nav>   
     </div>
 </header>
 
