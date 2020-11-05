@@ -13,7 +13,10 @@
     margin-top: 0;
    
 }
+main{
 
+    text-align: center;
+}
 /* Navigation */
 
 nav ul{
