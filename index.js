@@ -9,7 +9,7 @@ fetch("http://localhost:3000/api/teddies")
 response.forEach(element => {
   const div=document.createElement("div")
   div.innerHTML = `
-  <div class="produit mx-auto shadow-lg">
+  <div class="produit mx-auto shadow-lg col-6">
   <div class="jumbotron x-5">
     <img src="${element.imageUrl}" class="img-responsive center-block mx-auto shadow-lg" alt="teddy_1" title="Norbert" height="300">
    
@@ -22,6 +22,11 @@ response.forEach(element => {
   container.appendChild(div)
 });
 })
+
+
+
+
+
 .catch(error => alert("Erreur : " + error));
 
 
