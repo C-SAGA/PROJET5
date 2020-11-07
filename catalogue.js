@@ -22,16 +22,14 @@ ${options}
 
 peluche.innerHTML = `
 <div class="produit mx-auto shadow-lg row justify-content-center col-4">
-
+<h3 class="produitOursonTeddy" height="200" class="h3-responsive center-block">${data.name}</h3><br>
 <div class="jumbotron x-4">
 
-  <img src="${data.imageUrl}" class="img-responsive center-block mx-auto shadow-md-dark" alt="teddy_1" title="Norbert" height="300">
-  
-
-  <h3 class="produitOursonTeddy" height="200" class="h3-responsive center-block">${data.name}</h3><br>
-  <input class="btn btn-secondary align-self-center center-block mx-auto btn-lg" type="submit" value="choisir une couleur">
+  <img src="${data.imageUrl}" class="img-responsive center-block mx-auto shadow-md-dark" alt="teddy_1" title="Norbert" height="300"><br><br>
+ 
   
  <p class="description  pl-1 ml-1 rounded  lead text-xl-center">${data.description}</p>
+ <input class="btn btn-secondary align-self-center center-block mx-auto btn-lg" type="submit" value="choisir une couleur"><br><br>
  <p  class="price lead"><strong><mark>${data.price} euro</mark></strong</p><br><br>
  
 
