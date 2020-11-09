@@ -1,3 +1,5 @@
+const { response } = require("express")
+
 const search = window.location.search
 
 const param = new URLSearchParams(search)
@@ -6,20 +8,39 @@ if(!localStorage.getItem("panier")){
 localStorage.setItem("panier", JSON.stringify([]))
 }
 
-
-
-  fetch("http://localhost:3000/api/teddies/" + id)
+fetch("http://localhost:3000/api/teddies/" + id)
   .then(response => response.json())
-  .then(data => {
-    console.log(data);
-    let options = ""
-    const peluche = document.getElementById("peluche")
-    for (let index = 0; index < data.colors.length; index++) {
-      const element = data.colors[index];
-     options += `<option>${element}</option>`
+  .then(response => {
+    console.log(response);
+
+    function lignePanier (code, qte, prix) {
+        this.name = name;
+    
+        this.price = prix; function(qte) {
+            this.qteArticle += qte;
+        }
+        this.getPrixLigne = function() {
+            var resultat = this.prixArticle * this.qteArticle;
+            return resultat;
+        }
+        this.getCode = function() {
+            return this.codeArticle;
+        }
+    }
+    function lignePanier (code, qte, prix) {
+        this.codeArticle = code;
+        this.qteArticle = qte;
+        this.prixArticle = prix;
+        this.ajouterQte = function(qte) {
+            this.qteArticle += qte;
+        }
+        this.getPrixLigne = function() {
+            const resultat = this.prixArticle * this.qteArticle;
+            return resultat;
+        }
+        this.getCode = function(){
+            return this.codeArticle;
+        }
     }
 
-
-    <button id="valider">ajouter au panier</button>
- <input class="btn btn-secondary align-self-center center-block mx-auto btn-lg" type="submit" value="valider mon panier">
-</div>`
+   
