@@ -11,11 +11,11 @@
   integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="style.css">
   
-  <title>Catalogue Produits</title>
+  <title>ORINOCO - Catalogue Produits</title>
 </head>
 <body>
   <header>
-    <div class="container-fluid-sm">     
+    <div class="container-fluid">     
         <div class="navbar row">                   
             <div class="navbar-header">
                                     
@@ -45,12 +45,13 @@
 <main>
 
     <div id="peluche">
-        <form action="colors" method="post" class="couleurs"></form>
-    
-        <select colors = "couleurs" id="couleurs">
-        <option value="all">Choisissez votre couleur</option>
-        </select>
+       
     </div>
+
+    <div id="couleurs"></div>
+    <form action="colors" method="post" class="couleurs"></form>
+    
+       
     
 </main>
 
@@ -63,17 +64,17 @@
 
 
 <footer>		
-    <section class="footer">
+    <section class="footer d-flex justify-content-between fixed-bottom">
             <div id="footer_left">	
-                <a href="Mentions_legales.html">
+                <a class="text-decoration-none text-body pl-2" href="Mentions_legales.html">
                 <h4>Mentions Légales</h4></a>
             </div>
             <div id="footer_right">
-                <a href="mailto:adresse@serveur.com">	
+                <a class="text-decoration-none text-body pr-2" href="mailto:adresse@serveur.com">	
                 <h4>Contactez-nous</h4></a>	
             </div>
     </section>
-</footer>	
+</footer>		
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">

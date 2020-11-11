@@ -1,4 +1,4 @@
-const { response } = require("express")
+
 
 const search = window.location.search
 
@@ -42,5 +42,25 @@ fetch("http://localhost:3000/api/teddies/" + id)
             return this.codeArticle;
         }
     }
-
+}
+function  addDivDesign(section){
+    const div = document.createElement("div");
+    div.setAttribute("class", "col-md-5 mt-5 mb-4 ml-4 mr-4");
+    section[1].appendChild(div);
+  }
+  
+  get("http://localhost:3000/api/teddies")
+  .then(function (response){
+    const section = document.getElementsByClassName("row");
+  
+  
+  for (let i = 0; i < response.length; i = i + 1){
+    addProduct(response[i], section);
+  }
+  
+  if (response.length % 2 === 1){
+    addDivDesign(section);
+  }
+  })
+  
    

@@ -1,5 +1,9 @@
 body{
     background-color: #f3e9f1;
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    margin-left: 0;
 }
 
 #logo{ 
@@ -15,25 +19,21 @@ body{
 }
 
 .produit{
-    background-image:  #955eed 20%, #f3e9f1 100%;  
+    background-image:  #955eed 20%, #f3e9f1 100%; 
+    
 }
 
-.container-fluid-sm{
-    width: 100%;
-    height: 100%;
-    background-color: #f3e9f1;
+.container-fluid{
     display: flex;
-    justify-content: flex-end;
 }
 
 main{
+    width: 100%;
     background-color:#cdbfc6;
     text-align: center;
 }
 
-
 /* Navigation */
-
 nav ul{
     list-style-type: none;
 }
@@ -57,21 +57,23 @@ h1, h2, h3{
 /* Design peluches */
 
 #peluche{
-    background-color: :#cdbfc6;
+    background-color: #cdbfc6;
 }
 
 section{
     background-color: #f3e9f1;
 }
 
-article{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
+
+
 
 
 /*footer */
+
+footer{
+    height: 30px;
+    bottom: 0px;
+}
 
 #footer_right{
     margin-top: 22px;
