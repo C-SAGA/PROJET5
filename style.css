@@ -18,11 +18,6 @@ body{
     box-shadow: 5px 5px 5px 5px grey;
 }
 
-.produit{
-    background-image:  #955eed 20%, #f3e9f1 100%; 
-    
-}
-
 .container-fluid{
     display: flex;
 }
