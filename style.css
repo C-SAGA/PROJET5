@@ -7,9 +7,6 @@ body{
 }
 
 #logo{ 
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
     margin-right: 1145px;
 } 
 
@@ -34,7 +31,7 @@ nav ul{
 }
 
 nav a{
-    font-size: 1.25rem;
+    font-size: 1.20rem;
     color: black;
     padding-bottom: 3px;
     text-decoration: none;
