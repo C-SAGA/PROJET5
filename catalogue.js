@@ -44,7 +44,8 @@ localStorage.setItem("panier", JSON.stringify([]))
       </div>
     </div
   </div>`
-
+  
+  
   
   document.getElementById("valider").addEventListener("click", function(){
    const panier = JSON.parse(localStorage.getItem("panier"))

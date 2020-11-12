@@ -1,5 +1,3 @@
-
-
 const search = window.location.search
 
 const param = new URLSearchParams(search)
