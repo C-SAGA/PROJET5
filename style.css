@@ -5,20 +5,16 @@ body{
     margin-top: 0;
     margin-left: 0;
 }
-
 #logo{ 
     margin-right: 1145px;
 } 
-
 #nav-toggle{
     margin: 10px 10px 0 0;
     border: 0;
 }
-
 .icon-bar{
     float: right;
 }
-
 .col-5{
     margin-left: 5em;
 }
@@ -26,25 +22,21 @@ body{
     background-color: #f3e9f1;
     text-shadow: darkgrey 0.3em 0.3em 0.3em;
 }
-
 .container-fluid{
     display: flex;
     margin-top: -20px;
     flex-wrap: wrap;
 }
-
 main{
     display: block;
     width: 100%;
     background-color:#cdbfc6;
     text-align: center;
 }
-
 /* Navigation */
 nav ul{
     list-style-type: none;
 }
-
 nav a{
     font-size: 1.20rem;
     color: black;
@@ -52,15 +44,12 @@ nav a{
     text-decoration: none;
     font-weight: 700;
 }
-
 nav a:hover{
     color: #760001;
 }
-
 h1, h2, h3{
     text-align: center;
 }
-
 #nav-toggle{
     margin: 10px 10px 0 0;
     border: 0;
@@ -68,20 +57,37 @@ h1, h2, h3{
 }
 
 /* Design peluches */
-
 #peluche{
     background-color: #cdbfc6;
     margin-left: 260px;
 }
-
 section{
     background-color: #f3e9f1;
 }
 
+i{
+    font-size:20px;
+}
+
+/* Tableau Panier */
+table{
+    width: 50%;
+    margin: auto;
+}
+
 .imagePanier img{
-    width: 150px;
+    width: 180px;
     height: 150px;
 }
+
+.prixteddy{
+    font-weight: 500;
+    width: 120px;
+    text-align: end;
+}
+
+
+
 /*footer */
 
 #footer_right, #footer_left{

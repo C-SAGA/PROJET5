@@ -44,20 +44,29 @@
 
 <main>
     <h2>Peluches choisies</h2><br>    
-    <div id="panierContent">
-        <h3>Votre panier</h3>
-    <i class="fas fa-shopping-cart"></i>
-    <table class="table-striped table-bordered table-responsive">
-        <thead>
-          <tr>
-            <th scope="col">Nom</th>
-            <th scope="col">Image</th>
-            <th scope="col">Prix</th>
-          </tr>
-        </thead>
-        <tbody id="teddies">
-        </tbody>
-      </table>
+        <h3>Votre panier &nbsp<i class="fas fa-shopping-cart"></i></h3><br><br>
+    <div id="panierContent" style="min-height: 300px">
+        
+        <section class="container cart-page" data-affix-spy data-checkout>
+            <div id="widthtab" class="row justify-content-left align-items-left">
+                <div class="col-5">
+                    <div class="jumbotron shadow-lg-dark mx-8">
+                        <table class=" table table-responsive strong">
+                        <thead>
+                        <tr>
+                            <th scope="col-4">Nom</th>
+                            <th scope="col-4">Image</th>
+                            <th scope="col-4">Prix</th>
+                        </tr>
+                        </thead>
+                        <tbody id="teddies">
+
+                        </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
     <h3>Nous vous remercions pour votre commande !!!</h3>
@@ -95,23 +104,20 @@
                 </label>
                 <input class="form-control" type="adresse" placeholder="Votre adresse" required="" id="input_504">
                 <div class="help-block"></div>	
-            </div>										
-        
+            </div>		
             <div class="form-group">
-                <label for="message">
-                    Renseignements complémentaires<br>
+                <label for="code_postal">
+                   Code Postal
                 </label>
-
-                <textarea id="message" class="form-control" placeholder="informations complémentaires" rows="4" cols="50" required>
-                </textarea>
-
-                    <div class="help-block"></div>
-            </div> 
+                <input class="form-control" type="adresse" placeholder="Votre code postal" required="" id="input_504">
+                <div class="help-block"></div>	
+            </div>									
+        
             <button class="bloc-button btn btn-lg btn-block cta-hero btn-atomic-tangerine" type="submit" data-nlok-ref-guid="a2126519-17a9-4e53-a8b6-c6ebe4584b29">
                 Envoyer
             </button>
         </form>
-        <p style="color: darkgray;" id="erreur"><</p>
+        <p style="color: darkgray;" id="erreur"></p>
     </div>	
 </main>
 

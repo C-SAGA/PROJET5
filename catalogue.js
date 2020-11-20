@@ -20,7 +20,6 @@ if (!id) {
   .catch(error => alert("Erreur : " + error));
 }
 
-
 function loadTeddies(data) {
     let options = "";
     const peluche = document.getElementById("peluche")
@@ -39,22 +38,17 @@ function loadTeddies(data) {
               <div class="jumbotron x-4">
                 <img src="${data.imageUrl}" class="img-responsive center-block shadow-lg-dark" height="300"><br><br>            
                 <p class="description pl-2 pl-2 text-justify lead">${data.description}</p>
-              
                 <label for="colors class="labelSelect"><strong>Choisissez votre couleur préférée <strong></label><br>
                 <select id="colors">
                   ${options}        
                 </select><br><br>
                 <p class="price lead"><strong><mark>${data.price} euro</mark></strong</p><br><br>
-                
                 <button class="btn btn-secondary" id="valider">ajouter au panier</button><br><br>
-              
-                </div>
+              </div>
           </div>
         </div>
       </div
     </div>`
-
-
 
     document.getElementById("valider").addEventListener("click", function() {
         const panier = JSON.parse(localStorage.getItem("panier"))
