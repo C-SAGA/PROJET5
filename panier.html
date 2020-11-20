@@ -24,7 +24,7 @@
                  </button>
            
                  <a class="navbar-brand" href="index.html">   
-                    <img id="logo" src="images/logoOrinoco.png" alt="Logo Orinoco" title="logo de ORINOCO" height="90"/>	
+                    <img id="logo" src="images/logoOrinoco.png" alt="Logo Orinoco" title="logo de ORINOCO" height="80"/>	
                 </a>
             </div>        
         </div>   
@@ -35,21 +35,88 @@
                     <a class="nav-link" href="catalogue.html" title="Les achats">Catalogue</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html" title="Formulaire de contact">Nous contacter</a>
+                    <a class="nav-link" href="Nous_contacter.html" title="Formulaire de contact">Nous contacter</a>
                 </li>                   
             </ul>
         </nav>   
     </div>
 </header>
 
+<main>
+    <h2>Peluches choisies</h2><br>    
+    <div id="panierContent">
+        <h3>Votre panier</h3>
+    <i class="fas fa-shopping-cart"></i>
+    <table class="table-striped table-bordered table-responsive">
+        <thead>
+          <tr>
+            <th scope="col">Nom</th>
+            <th scope="col">Image</th>
+            <th scope="col">Prix</th>
+          </tr>
+        </thead>
+        <tbody id="teddies">
+        </tbody>
+      </table>
+    </div>
 
-<div class="panier">
-    
-</div>
+    <h3>Nous vous remercions pour votre commande !!!</h3>
+    <p>Afin de nous permettre la livraison, merci d'indiquer vos coordonnées dans le formulaire ci-dessous :</p><br>
+    <div class="col-sm-3">
+        <form id="inscription " novalidate>
+        <div class="form-group">
+            <label for="name">
+                    Nom
+            </label>
+                <input type="texte "id="name" placeholder="Votre nom" class="form-control" required><br>         
+                    
+            <div class="help-block"></div>
+        </div>
+        <div class="form-group">
+            <label for="name">
+                    Prénom
+            </label>
+                <input type="texte "id="prenom" placeholder="Votre prénom" class="form-control" required><br>         
+                    
+            <div class="help-block"></div>
+        </div>
+            <div class="form-group">
+                <label for="email">
+                    Adresse email
+                </label>
+                    <input id="email" class="form-control" placeholder="Votre adresse mail" type="email" required><br>
+            
+                <div class="help-block"></div>
+            </div>
 
+            <div class="form-group">
+                <label for="input_504">
+                    Adresse
+                </label>
+                <input class="form-control" type="adresse" placeholder="Votre adresse" required="" id="input_504">
+                <div class="help-block"></div>	
+            </div>										
+        
+            <div class="form-group">
+                <label for="message">
+                    Renseignements complémentaires<br>
+                </label>
+
+                <textarea id="message" class="form-control" placeholder="informations complémentaires" rows="4" cols="50" required>
+                </textarea>
+
+                    <div class="help-block"></div>
+            </div> 
+            <button class="bloc-button btn btn-lg btn-block cta-hero btn-atomic-tangerine" type="submit" data-nlok-ref-guid="a2126519-17a9-4e53-a8b6-c6ebe4584b29">
+                Envoyer
+            </button>
+        </form>
+        <p style="color: darkgray;" id="erreur"><</p>
+    </div>	
+</main>
 
 <footer>		
-    <section class="footer d-flex justify-content-between fixed-bottom">
+    <section class="footer d-flex justify-content-between fixed height="30">
             <div id="footer_left">	
                 <a class="text-decoration-none text-body pl-2" href="Mentions_legales.html">
                 <h4>Mentions Légales</h4></a>
@@ -70,6 +137,7 @@ integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfoo
 integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 </script>
 <script src="./panier.js"></script>  
+<script src="https://kit.fontawesome.com/88c8c163e8.js" crossorigin="anonymous"></script>
 </body>
 </html>
 
