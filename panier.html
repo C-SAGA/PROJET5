@@ -43,41 +43,53 @@
 </header>
 
 <main>
-    <h2>Peluches choisies</h2><br>    
-        <h3>Votre panier &nbsp<i class="fas fa-shopping-cart"></i></h3><br><br>
-    <div id="panierContent" style="min-height: 300px">
-        
-        <section class="container cart-page" data-affix-spy data-checkout>
-            <div id="widthtab" class="row justify-content-left align-items-left">
-                <div class="col-5">
+    <h2>Peluches choisies</h2><br><br>    
+       
+     
+    <section class="container cart-page" data-affix-spy data-checkout>
+        <h3>Votre panier &nbsp;<i class="fas fa-shopping-cart"></i></h3><br>
+        <div id="panierContent" style="min-height: 300px">
+            <div class="row justify-content-left width="50%" align-items-left">
+                <div class="col-8">
                     <div class="jumbotron shadow-lg-dark mx-8">
-                        <table class=" table table-responsive strong">
+                        <table class="table table-responsive strong">
                         <thead>
                         <tr>
-                            <th scope="col-4">Nom</th>
-                            <th scope="col-4">Image</th>
-                            <th scope="col-4">Prix</th>
+                            <th style="width:10%" scope="col">Nom</th>
+                            <th style="width:10%" scope="col">Couleur</th>
+                            <th style="width:50%" scope="col">Image</th>
+                            <th style="width:30%" scope="col">Prix</th>
                         </tr>
                         </thead>
+                    
                         <tbody id="teddies">
-
+                        
                         </tbody>
-                        </table>
+                        </table>           
                     </div>
                 </div>
-            </div>
-        </section>
-    </div>
+            </div> 
+        </div>
+                <div class="row justify-content-left align-items-right">
+                <div class="col-3" id="montantCommande">
 
-    <h3>Nous vous remercions pour votre commande !!!</h3>
+                </div> 
+            
+                </div>
+           
+        
+    </section>
+    
+
+    <br><br></br><h3>Nous vous remercions pour votre commande !!!</h3>
     <p>Afin de nous permettre la livraison, merci d'indiquer vos coordonnées dans le formulaire ci-dessous :</p><br>
     <div class="col-sm-3">
-        <form id="inscription " novalidate>
+        <form id="inscription" novalidate>
         <div class="form-group">
             <label for="name">
                     Nom
             </label>
-                <input type="texte "id="name" placeholder="Votre nom" class="form-control" required><br>         
+                <input type="texte" id="name" placeholder="Votre nom" class="form-control" required><br>         
                     
             <div class="help-block"></div>
         </div>
@@ -85,7 +97,7 @@
             <label for="name">
                     Prénom
             </label>
-                <input type="texte "id="prenom" placeholder="Votre prénom" class="form-control" required><br>         
+                <input type="texte" id="prenom" placeholder="Votre prénom" class="form-control" required><br>         
                     
             <div class="help-block"></div>
         </div>
@@ -109,7 +121,7 @@
                 <label for="code_postal">
                    Code Postal
                 </label>
-                <input class="form-control" type="adresse" placeholder="Votre code postal" required="" id="input_504">
+                <input class="form-control" type="code_postal" placeholder="Votre code postal" required="" id="address">
                 <div class="help-block"></div>	
             </div>									
         
@@ -122,7 +134,7 @@
 </main>
 
 <footer>		
-    <section class="footer d-flex justify-content-between fixed height="30">
+    <section class="footer d-flex justify-content-between fixed" height="30">
             <div id="footer_left">	
                 <a class="text-decoration-none text-body pl-2" href="Mentions_legales.html">
                 <h4>Mentions Légales</h4></a>
