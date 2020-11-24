@@ -86,6 +86,13 @@ table{
     text-align: end;
 }
 
+.montantTotal{
+    font-weight: 700;
+}
+
+.montantTotal h4{
+    font-weight: 400;
+}
 
 
 /*footer */

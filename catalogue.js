@@ -39,8 +39,8 @@ function loadTeddies(data) {
                 <img src="${data.imageUrl}" class="img-responsive center-block shadow-lg-dark" height="300"><br><br>            
                 <p class="description pl-2 pl-2 text-justify lead">${data.description}</p>
                 <label for="colors class="labelSelect"><strong>Choisissez votre couleur préférée <strong></label><br>
-                <select id="colors">
-                  ${options}        
+                <select id="colors" <button class=add" onclick="add(2)"></button>
+                  ${options}    
                 </select><br><br>
                 <p class="price lead"><strong><mark>${data.price} euro</mark></strong</p><br><br>
                 <button class="btn btn-secondary" id="valider">ajouter au panier</button><br><br>
@@ -49,12 +49,13 @@ function loadTeddies(data) {
         </div>
       </div
     </div>`
-
+    
+    //Envoi les données vers le localStorage //
     document.getElementById("valider").addEventListener("click", function() {
         const panier = JSON.parse(localStorage.getItem("panier"))
         panier.push(data)
         localStorage.setItem("panier", JSON.stringify(panier))
-        window.location.href = "panier.html"
+        window.location.href = "panier.html" 
         const m = "ajouté au panier";
         alert(m);
     });

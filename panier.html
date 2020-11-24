@@ -49,16 +49,17 @@
     <section class="container cart-page" data-affix-spy data-checkout>
         <h3>Votre panier &nbsp;<i class="fas fa-shopping-cart"></i></h3><br>
         <div id="panierContent" style="min-height: 300px">
-            <div class="row justify-content-left width="50%" align-items-left">
-                <div class="col-8">
+            <div class="row justify-content-left width="60%" align-items-left">
+                <div class="col-10">
                     <div class="jumbotron shadow-lg-dark mx-8">
                         <table class="table table-responsive strong">
                         <thead>
                         <tr>
-                            <th style="width:10%" scope="col">Nom</th>
-                            <th style="width:10%" scope="col">Couleur</th>
-                            <th style="width:50%" scope="col">Image</th>
-                            <th style="width:30%" scope="col">Prix</th>
+                            <th style="width:15%" scope="col">Nom</th>
+                            <th style="width:5%" scope="col">Couleur</th>
+                            <th style="width:60%" scope="col">Image</th>
+                            <th style="width:60%" scope="col">Prix</th>
+                            <th style="width:5%" scope="col">Supprimer</th>
                         </tr>
                         </thead>
                     
@@ -111,17 +112,17 @@
             </div>
 
             <div class="form-group">
-                <label for="input_504">
+                <label for="address">
                     Adresse
                 </label>
                 <input class="form-control" type="adresse" placeholder="Votre adresse" required="" id="input_504">
                 <div class="help-block"></div>	
             </div>		
             <div class="form-group">
-                <label for="code_postal">
-                   Code Postal
+                <label for="ville">
+                   Ville
                 </label>
-                <input class="form-control" type="code_postal" placeholder="Votre code postal" required="" id="address">
+                <input class="form-control" type="ville" placeholder="Votre ville" required="" id="address">
                 <div class="help-block"></div>	
             </div>									
         
@@ -145,6 +146,7 @@
             </div>
     </section>
 </footer>	
+<script src="./panier.js"></script> 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
 integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
 </script>
@@ -154,7 +156,6 @@ integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfoo
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
 integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 </script>
-<script src="./panier.js"></script>  
 <script src="https://kit.fontawesome.com/88c8c163e8.js" crossorigin="anonymous"></script>
 </body>
 </html>
