@@ -26,9 +26,9 @@ if (!panierContent || panierContent.length < 1){
         tdPrix.innerHTML = `
         <td  id="col-2">
         <div class="price lead"><strong>${element.price} euro</strong></div>`    
-        tdPrix.className = "prixteddy lead strong" 
+        tdPrix.className = "prixTeddy lead strong" 
         tdPrix.textContent = element.price + " euro"
-        tdBtn.innerHTML = `<tdBtn onclick = "supprimer()" type="submit" <i class="fas fa-trash-alt"></i></tdBtn>`
+        tdBtn.innerHTML = `<tdBtn class="btn-btn" type="button" value=""><i class="fas fa-trash-alt"></i></tdBtn>`
         //Arborescence//
         tr.appendChild(tdNom)
         tr.appendChild(tdColors)
@@ -43,15 +43,72 @@ if (!panierContent || panierContent.length < 1){
     pTotal.className = "montantTotal lead mark"
     pTotal.innerHTML = "<h4> Montant total de votre commande </h4>" + totalPrixCommande + " euro"
     container.appendChild(pTotal);
-  }  
-    // Supprimer des lignes //
-    function supprimer(){
-        let article = document.getElementById("teddies");
-        article.remove();
-        const m = "Votre article a été supprimé";
-        alert(m); 
-      }   
-      
+  
+    // Supprimer des lignes produit et réactualiser montant total//
+    if (document.readyState == "loading"){
+      document.addEventListener("DOMContentLoaded", ready)
+    }
+    else{
+      ready()
+    }
+    function ready (){
+      const supprimeBtn = document.getElementsByClassName("btn-btn")
+      console.log(supprimeBtn)
+      for (let i = 0; i < supprimeBtn.length; i++){
+        const button = supprimeBtn[i]
+        button.addEventListener("click", supprimer   )    
+      }
+    } 
+    
+    function supprimer(event){
+      const buttonClicked = event.target
+      buttonClicked.parentElement.parentElement.remove()
+      reactualisePanier()
+    }
+
+    function reactualisePanier(){
+    const produitContainer = document.getElementsByClassName("cart-items")
+    const cartTeddies = produitContainer.getElementsByClassName("cart-row")
+    const total = 0
+    for (let i = 0; i < cartTeddies.lenght; i++){
+    const cartRow = cartTeddies[i]
+    const priceElement = cartRow.getElementsByClassName(tdPrix)[0]
+    console.log(priceElement)
+    const prix = parseFloat(priceElement.innerHTML.replace("$", ''))
+    total = total + prix
+   }
+   document.getElementsByClassName("totalPrixCommande")[0].innerText = "$" + total
+   }
+}   
+  
+    // Formulaire inscription //
+      function valider() {
+        // si la valeur du champ prenom est non vide
+        if(document.formSaisie.prenom.value != "") {
+          // alors on envoie le formulaire
+          document.formSaisie.submit();
+        }
+        else {
+          // sinon on affiche un message
+          alert("Saisissez le prénom");
+        }
+      }
+      function validation()
+{
+//chaque champs doit être non vide, ici le test est fait pour 3
+//vous pouvez changer le nom de ces champs ici ch1,ch2,ch3
+//vous pouvez ajouter d'autres champs, prenez garde d'ajouter
+//autant de tests que de champs ajoutés
+//création MZ-2003
+if ((document.mon_form.name.value=="")||
+(document.mon_form.prenom.value=="")||
+(document.mon_form.ch3.value==""))
+{
+//votre message ici
+window.alert ("Certains champs sont vides !!!!! Merci de les renseigner.")
+return false;
+}
+}
  
 
 

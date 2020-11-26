@@ -47,36 +47,41 @@
        
      
     <section class="container cart-page" data-affix-spy data-checkout>
-        <h3>Votre panier &nbsp;<i class="fas fa-shopping-cart"></i></h3><br>
+        <br><h3>Votre panier &nbsp;<i class="fas fa-shopping-cart"></i></h3><br>
         <div id="panierContent" style="min-height: 300px">
-            <div class="row justify-content-left width="60%" align-items-left">
-                <div class="col-10">
-                    <div class="jumbotron shadow-lg-dark mx-8">
-                        <table class="table table-responsive strong">
-                        <thead>
-                        <tr>
-                            <th style="width:15%" scope="col">Nom</th>
-                            <th style="width:5%" scope="col">Couleur</th>
-                            <th style="width:60%" scope="col">Image</th>
-                            <th style="width:60%" scope="col">Prix</th>
-                            <th style="width:5%" scope="col">Supprimer</th>
-                        </tr>
-                        </thead>
-                    
-                        <tbody id="teddies">
-                        
-                        </tbody>
-                        </table>           
-                    </div>
-                </div>
-            </div> 
-        </div>
+            <div class="row justify-content-left align-items-left style="width:60%">
+               
+                    <div class="col-10">
+                        <div class="jumbotron shadow-lg-dark mx-8">
+                            <table class="table table-responsive strong">
+                                    <thead>                          
+                                    <tr>
+                                    <th style="width:15%" scope="col">Nom</th>
+                                    <th style="width:5%" scope="col">Couleur</th>
+                                    <th style="width:60%" scope="col">Image</th>
+                                    <th style="width:60%" scope="col">Prix</th>
+                                    <th style="width:10%" scope="col">Supprimer</th>
+                                    </tr>
+                                    </thead> 
+                                                
+                                    <tbody id="teddies">
+                                        <div class="cart-row">
+                                        <div class="cart-items">  
+                                        </div>
+                                    </div> 
+                                        </tbody>   
+
+                                </table>           
+                        </div>
+                    </div>         
+               
+            </div>
                 <div class="row justify-content-left align-items-right">
                 <div class="col-3" id="montantCommande">
-
+                </div> 
                 </div> 
             
-                </div>
+        </div>
            
         
     </section>
@@ -85,12 +90,12 @@
     <br><br></br><h3>Nous vous remercions pour votre commande !!!</h3>
     <p>Afin de nous permettre la livraison, merci d'indiquer vos coordonnées dans le formulaire ci-dessous :</p><br>
     <div class="col-sm-3">
-        <form id="inscription" novalidate>
+        <form id="registerForm" novalidate>
         <div class="form-group">
             <label for="name">
                     Nom
             </label>
-                <input type="texte" id="name" placeholder="Votre nom" class="form-control" required><br>         
+                <input type="text" id="name" placeholder="Votre nom" class="form-control" required><br>         
                     
             <div class="help-block"></div>
         </div>
@@ -98,7 +103,7 @@
             <label for="name">
                     Prénom
             </label>
-                <input type="texte" id="prenom" placeholder="Votre prénom" class="form-control" required><br>         
+                <input type="text" id="prenom" placeholder="Votre prénom" class="form-control" required><br>         
                     
             <div class="help-block"></div>
         </div>
@@ -115,18 +120,18 @@
                 <label for="address">
                     Adresse
                 </label>
-                <input class="form-control" type="adresse" placeholder="Votre adresse" required="" id="input_504">
+                <input class="form-control" type="address" placeholder="Votre adresse" required="" id="input_504">
                 <div class="help-block"></div>	
             </div>		
             <div class="form-group">
                 <label for="ville">
                    Ville
                 </label>
-                <input class="form-control" type="ville" placeholder="Votre ville" required="" id="address">
+                <input class="form-control" type="text" placeholder="Votre ville" required="" id="address">
                 <div class="help-block"></div>	
             </div>									
         
-            <button class="bloc-button btn btn-lg btn-block cta-hero btn-atomic-tangerine" type="submit" data-nlok-ref-guid="a2126519-17a9-4e53-a8b6-c6ebe4584b29">
+            <button form="registerForm" class="bloc-button btn btn-lg btn-block cta-hero btn-atomic-tangerine" type="submit" data-nlok-ref-guid="a2126519-17a9-4e53-a8b6-c6ebe4584b29">
                 Envoyer
             </button>
         </form>
