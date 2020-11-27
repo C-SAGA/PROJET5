@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="ORINOCO, site web, Ourson en peluche, peluche, teddybear, site de vente de peluches, pelucherie">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Vous souhaitez acquérir les plus belles peluches ? Faites appel à ORINOCO, les plus douces pour les calins des tout petits !!!">
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>ORINOCO - panier</title>
+</head>
+<body>
+<header>
+    <div class="container-fluid">     
+        <div class="navbar row">                   
+            <div class="navbar-header">
+                                    
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                 </button>
+           
+                 <a class="navbar-brand" href="index.html">   
+                    <img id="logo" src="images/logoOrinoco.png" alt="Logo Orinoco" title="logo de ORINOCO" height="80"/>	
+                </a>
+            </div>        
+        </div>   
+        <nav class="navbar navbar-expand-lg">           
+            <a class="navbar-brand" href="index.html" title="Les peluches">Accueil</a>   
+            <ul class="navbar-nav">                     
+                <li class="nav-item active">
+                    <a class="nav-link" href="catalogue.html" title="Les achats">Catalogue</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Nous_contacter.html" title="Formulaire de contact">Nous contacter</a>
+                </li>                   
+            </ul>
+        </nav>   
+    </div>
+</header>
+
+<main>
+    <h2>Peluches choisies</h2><br><br>    
+       
+     
+    <section class="container cart-page" data-affix-spy data-checkout>
+        <br><h3>Votre panier &nbsp;<i class="fas fa-shopping-cart"></i></h3><br>
+        <div id="panierContent" style="min-height: 300px">
+            <div class="row justify-content-left align-items-left">
+               
+                    <div class="col-10">
+                        <div class="jumbotron shadow-lg-dark mx-8">
+                            <table class="table table-responsive strong">
+                                    <thead>                          
+                                    <tr>
+                                    <th style="width:15%" scope="col">Nom</th>
+                                    <th style="width:5%" scope="col">Couleur</th>
+                                    <th style="width:60%" scope="col">Image</th>
+                                    <th style="width:60%" scope="col">Prix</th>
+                                    <th style="width:10%" scope="col">Supprimer</th>
+                                    </tr>
+                                    </thead> 
+                                                
+                                    <tbody class="cart-items" id="teddies">
+                                        <div class="cart-row">
+                                       
+                                        </div> 
+                                    </tbody>   
+
+                                </table>           
+                        </div>
+                    </div>         
+               
+            </div>
+                <div class="row justify-content-left align-items-right">
+                <div class="col-3" id="montantCommande">
+                </div> 
+                </div> 
+            
+        </div>
+           
+        
+    </section>
+    
+
+    <br><br></br><h3>Nous vous remercions pour votre commande !!!</h3>
+    <p>Afin de nous permettre la livraison, merci d'indiquer vos coordonnées dans le formulaire ci-dessous :</p><br>
+    <div class="col-sm-3">
+        <form id="registerForm" novalidate>
+        <div class="form-group">
+            <label for="name">
+                    Nom
+            </label>
+                <input type="text" id="name" placeholder="Votre nom" class="form-control" required><br>         
+                    
+            <div class="help-block"></div>
+        </div>
+        <div class="form-group">
+            <label for="name">
+                    Prénom
+            </label>
+                <input type="text" id="prenom" placeholder="Votre prénom" class="form-control" required><br>         
+                    
+            <div class="help-block"></div>
+        </div>
+            <div class="form-group">
+                <label for="email">
+                    Adresse email
+                </label>
+                    <input id="email" class="form-control" placeholder="Votre adresse mail" type="email" required><br>
+            
+                <div class="help-block"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="address">
+                    Adresse
+                </label>
+                <input class="form-control" type="address" placeholder="Votre adresse" required="" id="input_504">
+                <div class="help-block"></div>	
+            </div>		
+            <div class="form-group">
+                <label for="ville">
+                   Ville
+                </label>
+                <input class="form-control" type="text" placeholder="Votre ville" required="" id="address">
+                <div class="help-block"></div>	
+            </div>									
+        
+            <button form="registerForm" class="bloc-button btn btn-lg btn-block cta-hero btn-atomic-tangerine" type="submit" data-nlok-ref-guid="a2126519-17a9-4e53-a8b6-c6ebe4584b29">
+                Envoyer
+            </button>
+        </form>
+        <p style="color: darkgray;" id="erreur"></p>
+    </div>	
+</main>
+
+<footer>		
+    <section class="footer d-flex justify-content-between fixed" height="30">
+            <div id="footer_left">	
+                <a class="text-decoration-none text-body pl-2" href="Mentions_legales.html">
+                <h4>Mentions Légales</h4></a>
+            </div>
+            <div id="footer_right">
+                <a class="text-decoration-none text-body pr-2" href="mailto:adresse@serveur.com">	
+                <h4>Contactez-nous</h4></a>	
+            </div>
+    </section>
+</footer>	
+<script src="./panier.js"></script> 
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
+integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
+integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+</script>
+<script src="https://kit.fontawesome.com/88c8c163e8.js" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+    
