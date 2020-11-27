@@ -28,7 +28,7 @@ if (!panierContent || panierContent.length < 1){
         <div class="price lead"><strong>${element.price} euro</strong></div>`    
         tdPrix.className = "prixTeddy lead strong" 
         tdPrix.textContent = element.price + " euro"
-        tdBtn.innerHTML = `<tdBtn class="btn-btn" type="button" value=""><i class="fas fa-trash-alt"></i></tdBtn>`
+        tdBtn.innerHTML = `<tdBtn class="btn-btn" type="button" value="teddies"><i class="fas fa-trash-alt"></i></tdBtn>`
         //Arborescence//
         tr.appendChild(tdNom)
         tr.appendChild(tdColors)
