@@ -1,3 +1,4 @@
+
 //Récupération contenu panier (localstorage)//
 const panierContent = JSON.parse(localStorage.getItem("panier")); 
 const container = document.getElementById("panierContent");
@@ -8,8 +9,10 @@ if (!panierContent || panierContent.length < 1){
 } else{ 
     const teddies = document.getElementById("teddies");
     let totalPrixCommande = 0 
-    panierContent.forEach(element => {
+    const produits = []
+    panierContent.forEach((element, index) => {
         console.log(element)
+        produits.push(element._id)
         totalPrixCommande += element.price
         const tr = document.createElement("tr")
         const tdNom = document.createElement("td")
@@ -19,7 +22,7 @@ if (!panierContent || panierContent.length < 1){
         const tdBtn = document.createElement("td")
         tdNom.textContent = element.name
         tdColors.innerHTML = `
-       <p>${element.colors}</p>`
+       <div class="colors">${element.colors}</div>`       
         tdImg.innerHTML = `
         <img src="${element.imageUrl}"/>`
         tdImg.className = "imagePanier"
@@ -28,8 +31,14 @@ if (!panierContent || panierContent.length < 1){
         <div class="price lead"><strong>${element.price} euro</strong></div>`    
         tdPrix.className = "prixTeddy lead strong" 
         tdPrix.textContent = element.price + " euro"
-        tdBtn.innerHTML = `<tdBtn class="btn-btn" type="button" value="teddies"><i class="fas fa-trash-alt"></i></tdBtn>`
-        //Arborescence//
+        tdBtn.innerHTML = `<a><i class="fas fa-trash-alt"></i></a>`
+        tdBtn.addEventListener("click", function(){
+          console.log(element, index)
+          panierContent.splice(index, 1)
+          localStorage.setItem("panier",  JSON.stringify(panierContent)); 
+          window.location.reload()
+        })
+        // Arborescence//
         tr.appendChild(tdNom)
         tr.appendChild(tdColors)
         tr.appendChild(tdImg)
@@ -43,73 +52,63 @@ if (!panierContent || panierContent.length < 1){
     pTotal.className = "montantTotal lead mark"
     pTotal.innerHTML = "<h4> Montant total de votre commande </h4>" + totalPrixCommande + " euro"
     container.appendChild(pTotal);
-  
-    // Supprimer des lignes produit et réactualiser montant total//
-    if (document.readyState == "loading"){
-      document.addEventListener("DOMContentLoaded", ready)
-    }
-    else{
-      ready()
-    }
-    function ready (){
-      const supprimeBtn = document.getElementsByClassName("btn-btn")
-      console.log(supprimeBtn)
-      for (let i = 0; i < supprimeBtn.length; i++){
-        const button = supprimeBtn[i]
-        button.addEventListener("click", supprimer   )    
-      }
-    } 
-    
-    function supprimer(event){
-      const buttonClicked = event.target
-      buttonClicked.parentElement.parentElement.remove()
-      reactualisePanier()
-    }
-
-    function reactualisePanier(){
-    const produitContainer = document.getElementsByClassName("cart-items")
-    const cartTeddies = produitContainer.getElementsByClassName("cart-row")
-    const total = 0
-    for (let i = 0; i < cartTeddies.lenght; i++){
-    const cartRow = cartTeddies[i]
-    const priceElement = cartRow.getElementsByClassName(tdPrix)[0]
-    console.log(priceElement)
-    const prix = parseFloat(priceElement.innerHTML.replace("$", ''))
-    total = total + prix
-   }
-   document.getElementsByClassName("totalPrixCommande")[0].innerText = "$" + total
-   }
-}   
-  
-    // Formulaire inscription //
-      function valider() {
-        // si la valeur du champ prenom est non vide
-        if(document.formSaisie.prenom.value != "") {
-          // alors on envoie le formulaire
-          document.formSaisie.submit();
-        }
-        else {
-          // sinon on affiche un message
-          alert("Saisissez le prénom");
-        }
-      }
-      function validation()
-{
-//chaque champs doit être non vide, ici le test est fait pour 3
-//vous pouvez changer le nom de ces champs ici ch1,ch2,ch3
-//vous pouvez ajouter d'autres champs, prenez garde d'ajouter
-//autant de tests que de champs ajoutés
-//création MZ-2003
-if ((document.mon_form.name.value=="")||
-(document.mon_form.prenom.value=="")||
-(document.mon_form.ch3.value==""))
-{
-//votre message ici
-window.alert ("Certains champs sont vides !!!!! Merci de les renseigner.")
-return false;
-}
-}
  
+
+  //    Formulaire inscription //
+  let registerForm = document.getElementById("registerForm");
+  registerForm.addEventListener("submit", function(e){
+    const inputName = document.getElementById("name");
+    // if (inputName.value.trim() == ""){
+    // let monErreur = document.getElementById("erreur");
+    // monErreur.innerHTML = "Le Champs Nom doit être rempli";
+    // monErreur.style.color = "red";
+    // e.preventDefault();
+  // }
+  e.preventDefault()
+  const nom = document.getElementById("name").value 
+  const prenom = document.getElementById("prenom").value 
+  const email = document.getElementById("email").value 
+  const adresse = document.getElementById("adresse").value 
+  const ville = document.getElementById("ville").value 
+  const contact = {
+    lastName: nom, 
+    firstName: prenom,
+    address: adresse,
+    city: ville,
+    email : email
+  }
+  fetch("http://localhost:3000/api/teddies/order", {
+    body: JSON.stringify(
+      {
+        contact: contact,
+        products: produits
+      }
+    ),
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json'
+  }
+  })
+  .then(response => response.json())
+  .then(response => {
+  window.location.href = "confirmation.html?bonDeCommande="+response.orderId+"&total="+totalPrixCommande
+  })
+  .catch(erreur => console.log(erreur))
+});
+// const regex1 = /\w+/;
+// const regex2 = new RegExp('\\w+');
+
+// console.log(regex1);
+// // expected output: /\w+/
+
+// console.log(regex2);
+// // expected output: /\w+/
+
+// console.log(regex1 === regex2);
+// // expected output: false
+
+}
+
 
 
   

@@ -7,8 +7,8 @@
     <meta name="robots" content="index, follow">
     <meta name="description" content="Vous souhaitez acquérir les plus belles peluches ? Faites appel à ORINOCO, les plus douces pour les calins des tout petits !!!">
    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" 
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <title>ORINOCO - panier</title>
@@ -35,7 +35,7 @@
                     <a class="nav-link" href="catalogue.html" title="Les achats">Catalogue</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Nous_contacter.html" title="Formulaire de contact">Nous contacter</a>
+                    <a class="nav-link" href="confirmation.html" title="Confirmation de commande">Vos commandes</a>
                 </li>                   
             </ul>
         </nav>   
@@ -50,116 +50,119 @@
         <br><h3>Votre panier &nbsp;<i class="fas fa-shopping-cart"></i></h3><br>
         <div id="panierContent" style="min-height: 300px">
             <div class="row justify-content-left align-items-left">
-               
-                    <div class="col-10">
-                        <div class="jumbotron shadow-lg-dark mx-8">
-                            <table class="table table-responsive strong">
-                                    <thead>                          
-                                    <tr>
-                                    <th style="width:15%" scope="col">Nom</th>
-                                    <th style="width:5%" scope="col">Couleur</th>
-                                    <th style="width:60%" scope="col">Image</th>
-                                    <th style="width:60%" scope="col">Prix</th>
-                                    <th style="width:10%" scope="col">Supprimer</th>
-                                    </tr>
-                                    </thead> 
+                <div class="col-12">
+                    <div class="jumbotron shadow-lg-dark mx-8">
+                        <table class="table table-responsive strong">
+                            <thead>                          
+                                <tr>
+                                <th style="width:15%" scope="col">Nom</th>
+                                <th style="width:5%" scope="col">Couleur</th>
+                                <th style="width:60%" scope="col">Image</th>
+                                <th style="width:60%" scope="col">Prix</th>
+                                <th style="width:10%" scope="col">Supprimer</th>
+                                </tr>
+                            </thead> 
                                                 
-                                    <tbody class="cart-items" id="teddies">
-                                        <div class="cart-row">
+                            <tbody class="cart-items" id="teddies">
+                                <div class="cart-row">
                                        
-                                        </div> 
-                                    </tbody>   
-
-                                </table>           
-                        </div>
-                    </div>         
-               
+                                </div> 
+                            </tbody>   
+                        </table>           
+                    </div>
+                </div>                     
             </div>
                 <div class="row justify-content-left align-items-right">
-                <div class="col-3" id="montantCommande">
-                </div> 
-                </div> 
-            
-        </div>
-           
-        
+                    <div class="col-3" id="montantCommande"><br>
+                    </div> 
+                </div>          
+        </div>     
     </section>
-    
+    <section class="container cart-page pb-4" data-affix-spy data-checkout>
+        <div row pt-4>
+        <p class="mt-4">Afin de nous permettre la livraison, merci d'indiquer vos coordonnées dans le formulaire ci-dessous :</p><br>
+        </div>
+        <div  id="formulaire">
+            <div class="jumbotron mx-2 shadow-md-dark">
+                <div row class="col-md-12">
+                    <form id="registerForm" method="post" class="col-md-12">
+                        
+                        <div class="form-group">
+                            <label for="name" id="nomUtilisateur">
+                            Nom
+                            </label>
+                            <input type="text" id="name" placeholder="Votre nom"  class="form-control" required><br>         
+                            <span id="erreur"></span>  
+                            <div class="help-block"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="name">
+                            Prénom
+                            </label>
+                            <input type="text" id="prenom" placeholder="Votre prénom" class="form-control" required><br>                        
+                            <div class="help-block"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">
+                            Adresse email
+                            </label>
+                            <input id="email" class="form-control" placeholder="Votre adresse mail" type="email" required><br>            
+                            <div class="help-block"></div>
+                        </div>
 
-    <br><br></br><h3>Nous vous remercions pour votre commande !!!</h3>
-    <p>Afin de nous permettre la livraison, merci d'indiquer vos coordonnées dans le formulaire ci-dessous :</p><br>
-    <div class="col-sm-3">
-        <form id="registerForm" novalidate>
-        <div class="form-group">
-            <label for="name">
-                    Nom
-            </label>
-                <input type="text" id="name" placeholder="Votre nom" class="form-control" required><br>         
-                    
-            <div class="help-block"></div>
-        </div>
-        <div class="form-group">
-            <label for="name">
-                    Prénom
-            </label>
-                <input type="text" id="prenom" placeholder="Votre prénom" class="form-control" required><br>         
-                    
-            <div class="help-block"></div>
-        </div>
-            <div class="form-group">
-                <label for="email">
-                    Adresse email
-                </label>
-                    <input id="email" class="form-control" placeholder="Votre adresse mail" type="email" required><br>
-            
-                <div class="help-block"></div>
+                        <div class="form-group">
+                        <label for="address">
+                        Adresse
+                        </label>
+                        <input class="form-control" type="address" placeholder="Votre adresse" required="" id="adresse">
+                        <div class="help-block"></div>	
+                        </div>	
+
+                        <div class="form-group">
+                        <label for="ville">
+                        Ville
+                        </label>
+                        <input class="form-control" type="text" placeholder="Votre ville" required="" id="ville"><br>
+                        <div class="help-block"></div>	
+                        </div>									
+                                
+                        <button  class="btn btn-secondary" type="submit">
+                        Envoyer
+                        </button>
+                    </form> 
+                </div>    
             </div>
-
-            <div class="form-group">
-                <label for="address">
-                    Adresse
-                </label>
-                <input class="form-control" type="address" placeholder="Votre adresse" required="" id="input_504">
-                <div class="help-block"></div>	
-            </div>		
-            <div class="form-group">
-                <label for="ville">
-                   Ville
-                </label>
-                <input class="form-control" type="text" placeholder="Votre ville" required="" id="address">
-                <div class="help-block"></div>	
-            </div>									
-        
-            <button form="registerForm" class="bloc-button btn btn-lg btn-block cta-hero btn-atomic-tangerine" type="submit" data-nlok-ref-guid="a2126519-17a9-4e53-a8b6-c6ebe4584b29">
-                Envoyer
-            </button>
-        </form>
-        <p style="color: darkgray;" id="erreur"></p>
-    </div>	
+        </div>   
+    </section>
 </main>
 
-<footer>		
-    <section class="footer d-flex justify-content-between fixed" height="30">
-            <div id="footer_left">	
-                <a class="text-decoration-none text-body pl-2" href="Mentions_legales.html">
-                <h4>Mentions Légales</h4></a>
-            </div>
-            <div id="footer_right">
-                <a class="text-decoration-none text-body pr-2" href="mailto:adresse@serveur.com">	
-                <h4>Contactez-nous</h4></a>	
-            </div>
-    </section>
-</footer>	
+   <!-- * FOOTER -->
+   <footer class="d-flex justify-content-between">
+
+    <div id="footer_left">
+        <a class="text-decoration-none text-body pl-2" href="Mentions_legales.html">
+            <h4>Mentions Légales</h4>
+        </a>
+    </div>
+    <div id="footer_right">
+        <a class="text-decoration-none text-body pr-2" href="mailto:adresse@serveur.com">
+            <h4>Contactez-nous</h4>
+        </a>
+    </div>
+
+
+</footer>    
+   <!-- * FIN DE FOOTER -->
 <script src="./panier.js"></script> 
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
-integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
-integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-</script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
-integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-</script>
+ <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+ integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" 
+ integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" 
+ integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/88c8c163e8.js" crossorigin="anonymous"></script>
 </body>
 </html>
