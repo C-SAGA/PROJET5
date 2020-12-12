@@ -1,4 +1,5 @@
-const search = window.location.search //Création fiche produit //
+//Création Récapitulatif commande //
+const search = window.location.search 
 
 const param = new URLSearchParams(search)
 const id = param.get("bonDeCommande")
