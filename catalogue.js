@@ -23,8 +23,7 @@ if (!id) {
 function loadTeddies(data) {
     let options = "";
     const peluche = document.getElementById("peluche")
-    for (let i = 0; i < data.colors.length; i++) {
-
+    for (let i = 0; i <data.colors.length; i++) {
         const element = data.colors[i];
         options += "<option>" + element + "</option>"
     };
@@ -39,8 +38,9 @@ function loadTeddies(data) {
                 <div class="jumbotron mx-4">
                   <img src="${data.imageUrl}" class="img-responsive center-block shadow-lg-dark" height="300"><br><br>            
                   <p class="description pl-2 pl-2 text-justify lead">${data.description}</p>
-                  <label for="colors class="labelSelect"><strong>Choisissez votre couleur préférée <strong></label><br>
-                  <select id="colors" <button class=add" onclick="add(2) "><option value><font style=vertical-align: inherit;">Choisir.....</font></option></button>
+                  <label for="colors" class="labelSelect"><strong>Choisissez votre couleur préférée<strong></label><br>
+                  <select id="colors" <button class="add" onclick="add(2)">
+                    <option value><font-style="vertical-align: inherit;">Choisir.....</font></option></button>
                     ${options}    
                   </select><br><br>
                   <p class="price lead"><strong><mark>${data.price} euro</mark></strong</p><br><br>

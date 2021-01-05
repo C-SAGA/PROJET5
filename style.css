@@ -95,22 +95,17 @@ table{
     margin-bottom: 20px;}
 
 p{
-    font-size: 18px;
-}
+    font-size: 18px;}
 
 #montant, #numero{
     font-weight: 500;
-    font-size: 20px;
-}
+    font-size: 20px;}
 
 /*footer */
-.footer{
-    
-    background: #cdbfc6;
-}
+.footer{  
+    background: #cdbfc6;}
 
 #footer_right{
-    padding-top: 25px;
-}
+    padding-top: 25px;}
 
 

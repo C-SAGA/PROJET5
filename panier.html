@@ -76,42 +76,43 @@
                 </div>          
         </div>     
     </section>
-    <section class="container cart-page pb-4" data-affix-spy data-checkout>
+    <div class="container cart-page pb-4" data-affix-spy data-checkout>
         <div class="pt-4 mt-4">
         <br><h4>Afin de nous permettre la livraison, merci d'indiquer vos coordonnées dans le formulaire ci-dessous :</h4><br>
         </div>
         <div  id="formulaire">
-            <div class="jumbotron mx-2 shadow-md-dark">
+            <div class="jumbotron mx-5 my-5 shadow-md-dark">
                 <div class="col-md-12">
                     <form id="registerForm" method="post" class="col-md-12">
                         
                         <div class="form-group">
-                            <label for="name" id="nomUtilisateur">
+                            <label for="name" class="col-sm-2 col-form-label" id="nomUtilisateur">
                             Nom
                             </label>
+                            <div class="col-sm-8"></div>
                             <input type="text" id="name" placeholder="Votre nom"  class="form-control" required><br>         
                             <span id="erreur"></span>  
                             <div class="help-block"></div>
                         </div>
                         
                         <div class="form-group">
-                            <label for="name">
+                            <label for="name" class="col-sm-2 col-form-label">
                             Prénom
                             </label>
-                            <input type="text" id="prenom" placeholder="Votre prénom" class="form-control" required><br>                        
+                            <input type="text" id="prenom"  placeholder="Votre prénom" class="form-control" required><br>                        
                             <div class="help-block"></div>
                         </div>
                         
                         <div class="form-group">
-                            <label for="email">
+                            <label for="email" class="col-sm-4     col-form-label">
                             Adresse email
                             </label>
-                            <input id="email" class="form-control" placeholder="Votre adresse mail" type="email" required><br>            
+                            <input id="email" class="form-control"  placeholder="Votre adresse mail" type="email" required><br>            
                             <div class="help-block"></div>
                         </div>
 
                         <div class="form-group">
-                        <label for="adresse">
+                        <label for="adresse" class="col-sm-2 col-form-label">
                         Adresse
                         </label>
                         <input class="form-control" type="text" placeholder="Votre adresse" required="" id="adresse">
@@ -119,7 +120,7 @@
                         </div>	
 
                         <div class="form-group">
-                        <label for="ville">
+                        <label for="ville" class="col-sm-2 col-form-label">
                         Ville
                         </label>
                         <input class="form-control" type="text" placeholder="Votre ville" required="" id="ville"><br>
@@ -133,7 +134,7 @@
                 </div>    
             </div>
         </div>   
-    </section>
+    </div>
 </main>
 
    <!-- * FOOTER -->
