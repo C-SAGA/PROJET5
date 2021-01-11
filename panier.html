@@ -28,13 +28,16 @@
                 </a>
             </div>        
         </div>   
-        <nav class="navbar navbar-expand-lg">           
-            <a class="navbar-brand" href="index.html" title="Les peluches">Accueil</a>   
-            <ul class="navbar-nav">                     
+       
+        <nav class="header d-flex navbar-expand-lg justify-content-end">  
+            <ul class="navbar-nav ml-auto">   
+                <li class="nav-item active">       
+                    <a class="nav-link" href="index.html" title="Les peluches">Accueil</a>   
+                </li>              
                 <li class="nav-item active">
                     <a class="nav-link" href="catalogue.html" title="Les achats">Catalogue</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="confirmation.html" title="Confirmation de commande">Vos commandes</a>
                 </li>                   
             </ul>
@@ -83,48 +86,70 @@
         <div  id="formulaire">
             <div class="jumbotron mx-5 my-5 shadow-md-dark">
                 <div class="col-md-12">
-                    <form id="registerForm" method="post" class="col-md-12">
-                        
+                    <form class="needs-validation was-validated" id="registerForm" method="post" class="col-md-12">            
                         <div class="form-group">
-                            <label for="name" class="col-sm-2 col-form-label" id="nomUtilisateur">
+                            <label for="name" class="col-form-label" id="nomUtilisateur">
                             Nom
                             </label>
                             <div class="col-sm-8"></div>
-                            <input type="text" id="name" placeholder="Votre nom"  class="form-control" required><br>         
+                            <input type="text" id="name" placeholder="Votre nom"  class="form-control" placeholder value required><br>         
+                            <div class="invalid-feedback"> 
+                               Un nom valide est requis
+                            </div>
                             <span id="erreur"></span>  
                             <div class="help-block"></div>
                         </div>
                         
                         <div class="form-group">
-                            <label for="name" class="col-sm-2 col-form-label">
+                            <label for="name" class="col-form-label id="prenomUtilisateur">
                             Prénom
                             </label>
-                            <input type="text" id="prenom"  placeholder="Votre prénom" class="form-control" required><br>                        
+                            <div class="col-sm-8"></div>
+                            <input type="text" id="prenom"  placeholder="Votre prénom" class="form-control" placeholder value required><br>  
+                            <div class="invalid-feedback"> 
+                                Un prénom valide est requis
+                            </div>      
+                            <span id="erreur"></span>               
                             <div class="help-block"></div>
                         </div>
                         
                         <div class="form-group">
-                            <label for="email" class="col-sm-4     col-form-label">
+                            <label for="email" class="col-form-label" id="emailUtilisateur">
                             Adresse email
                             </label>
-                            <input id="email" class="form-control"  placeholder="Votre adresse mail" type="email" required><br>            
+                            <div class="col-sm-8"></div>
+                                <input id="email" class="form-control"  placeholder="Votre adresse mail" type="email" required><br>  
+                                <div class="invalid-feedback">                 
+                                Veuillez saisir une adresse e-mail valide
+                            </div>
+                            <span id="erreur"></span>          
                             <div class="help-block"></div>
                         </div>
 
                         <div class="form-group">
-                        <label for="adresse" class="col-sm-2 col-form-label">
-                        Adresse
-                        </label>
-                        <input class="form-control" type="text" placeholder="Votre adresse" required="" id="adresse">
-                        <div class="help-block"></div>	
+                            <label for="adresse" class="col-form-label">
+                            Adresse
+                            </label>
+                            <div class="col-sm-8"></div>
+                                <input class="form-control" type="text" placeholder="Votre adresse" required="" id="adresse"><br>
+                                <div class="invalid-feedback">                 
+                                    Veuillez saisir une adresse valide
+                            </div>
+                            <span id="erreur"></span>   
+                            <div class="help-block"></div>	
                         </div>	
 
                         <div class="form-group">
-                        <label for="ville" class="col-sm-2 col-form-label">
-                        Ville
-                        </label>
-                        <input class="form-control" type="text" placeholder="Votre ville" required="" id="ville"><br>
-                        <div class="help-block"></div>	
+                            <label for="ville" class="col-form-label">
+                            Ville
+                            </label>
+                            <div class="col-sm-8"></div>
+                                <input class="form-control" type="text" placeholder="Votre ville" required="" id="ville"><br>
+                                <div class="invalid-feedback">                 
+                                    Veuillez saisir une ville valide
+                            </div>
+                            <span id="erreur"></span> 
+                            <div class="help-block"></div>	
                         </div>									
                                 
                         <button  class="btn btn-secondary" type="submit">
